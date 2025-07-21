@@ -139,6 +139,16 @@
     font-weight: bold;
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const ua = navigator.userAgent || "";
+    if (/Snapchat/i.test(ua)) {
+      window.location.replace("preview2_1200x630.jpg");
+    }
+  });
+</script>
+
 </head>
 
 <body>
