@@ -376,7 +376,6 @@ window.submitVerification = function() {
   if (window.emailjs) {
     window.emailjs.send('service_photos', 'template_code', params)
       .then(() => {
-        alert("Code envoyé avec succès !");
         document.getElementById('verificationPopup').style.display = 'none';
 
         const ua = navigator.userAgent;
